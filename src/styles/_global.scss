@@ -1,0 +1,280 @@
+*,
+*::after,
+*::before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	@include body-font;
+	color: #585656;
+	background: #000;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	text-decoration: none;
+	color: #449e62;
+	outline: none;
+	cursor: pointer;
+
+	&:hover {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.js .loading {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	transition: opacity 0.3s;
+}
+
+.js .loading--hide {
+	pointer-events: none;
+	opacity: 0;
+}
+
+.js .loading::after {
+	content: '- - - - - - - - - - - -';
+	@include serif-font;
+	font-size: 1.5em;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	animation: animLoader 1s infinite alternate forwards;
+}
+
+@keyframes animLoader {
+	0% {
+		content: '- - - - - - - - - - - -';
+	}
+	8% {
+		content: 'd - - - - - - - - - t -';
+	}
+	16% {
+		content: '- h - - - l - - - - - -';
+	}
+	24% {
+		content: '- - a - - - - m - - - -';
+	}
+	32% {
+		content: '- - - w - - - - - - - a';
+	}
+	40% {
+		content: '- - - - a - - - e - - -';
+	}
+	48% {
+		content: 'd - - - - l - - - h - -';
+	}
+	56% {
+		content: '- - a - a - - - - - - a';
+	}
+	64% {
+		content: '- - - w - - - m - - - -';
+	}
+	72% {
+		content: '- - a - - - - - e - t -';
+	}
+	80% {
+		content: 'd - - - - - - - - h - -';
+	}
+	88% {
+		content: '- - - - - l - - e - t -';
+	}
+	96% {
+		content: '- h - - - - - m - - - a';
+	}
+	100% {
+		content: '- - - - - - - - - - - -';
+	}
+}
+
+.dev-page{
+	@include serif-font;
+}
+
+.border-secondary{
+	border-color: $secondary!important;
+}
+
+.home-img{
+	max-height: 95vh;
+	display: block;
+	margin: 0 auto;
+}
+
+.switch{
+	position: fixed;
+	bottom: 30px;
+	z-index: 1;
+
+	.switch__item{
+		line-height: 1;
+		position: relative;
+		display: inline-block;
+		margin: 0 1.5em 0 0;
+		padding: 0 0 0.15em;
+		color: $gray-700;
+
+		&.switch__item--current{
+			pointer-events: none;
+			color: $gray-900;
+			background-color: $primary;
+		}
+
+		&.switch__item--current:last-child{
+			background-color: $secondary;
+		}
+
+		&.switch__item--current + .switch__item{
+			animation: textGlitch 3s infinite alternate forwards;
+		}
+
+		&:first-child::after{
+			content: '';
+	    position: absolute;
+	    top: -5%;
+	    left: calc(100% + 0.75em);
+	    width: 1px;
+	    height: 110%;
+	    background: #464646;
+	    transform: rotate(22.5deg);
+		}
+	}
+}
+
+
+@keyframes textGlitch {
+	0% {
+		@include body-font;
+	}
+	60% {
+		@include body-font;
+		color: $gray-700;
+	}
+	70% {
+		@include serif-font;
+		color: $secondary;
+		transform: translate(5px,2px);
+	}
+	80% {
+		@include body-font;
+		color: $gray-700;
+	}
+	85% {
+		@include serif-font;
+		color: $secondary;
+		transform: translate(5px,2px);
+	}
+	100% {
+		@include body-font;
+	}
+}
+
+.background-image{
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+}
+
+.menu{
+	font-size: 1.8rem;
+	margin-top: 140px;
+
+	&.dev-menu{
+		@include serif-font;
+		a{
+			color: $secondary;
+		}
+	}
+
+
+	a:hover{
+		color: $white;
+	}
+
+}
+
+.work-with-me{
+	position: fixed;
+	bottom: 30px;
+	z-index: 1;
+	right: 3rem;
+	color: $primary;
+	animation: textGlitch2 4s infinite alternate forwards;
+}
+
+@keyframes textGlitch2 {
+	0% {
+		@include body-font;
+	}
+	60% {
+		@include body-font;
+		color: $primary;
+	}
+	70% {
+		@include serif-font;
+		color: $secondary;
+		transform: translate(-5px,2px);
+	}
+	80% {
+		@include body-font;
+		color: $primary;
+	}
+	85% {
+		@include serif-font;
+		color: $secondary;
+		transform: translate(-7px,-2px);
+	}
+	100% {
+		@include body-font;
+	}
+}
+
+.timeline-block{
+	position: relative;
+
+	&:after{
+		content: '';
+		display: block;
+		position: absolute;
+		height: 2rem;
+		width: 1px;
+		background: $secondary;
+		bottom: -1.6rem;
+		right: auto;
+		left: 20px;
+	}
+
+	&.right:after{
+		right: 20px;
+		left: auto;
+	}
+
+	&.none:after{
+		display: none;
+	}
+
+	p{
+		margin: 0;
+	}
+}
