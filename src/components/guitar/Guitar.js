@@ -12,7 +12,7 @@ class Guitar extends React.Component {
             <Menu />
           </div>
           <div className="col-sm-7">
-            <h2 className="mt-5 intro--guitar">Hello, My name is <span className="text-color-2">Dhawal </span>Mehta. I’m a <span className="text-secondary">Guitarist</span> & a Guitar <span className="text-secondary">Tutor.</span></h2>
+            <h2 className="mt-5 intro--guitar site-heading">Hello, My name is <span className="text-color-2">Dhawal </span>Mehta. I’m a <span className="text-secondary">Guitarist</span> & a Guitar <span className="text-secondary">Tutor.</span></h2>
           </div>
 
         </div>

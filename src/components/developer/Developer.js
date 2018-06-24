@@ -13,7 +13,7 @@ class Developer extends React.Component {
           </div>
           <div className="col-sm-8">
 
-            <h2 className="text-sm-right mt-5 intro">Hello, My name is <span className="text-color">Dhawal </span>Mehta. I’m a <span className="text-secondary">Full Stack Developer</span> & a Web/Tech <span className="text-secondary">Enthusiast.</span></h2>
+            <h2 className="text-sm-right mt-5 intro site-heading">Hello, My name is <span className="text-color">Dhawal </span>Mehta. I’m a <span className="text-secondary">Full Stack Developer</span> & a Web/Tech <span className="text-secondary">Enthusiast.</span></h2>
 
           </div>
         </div>
