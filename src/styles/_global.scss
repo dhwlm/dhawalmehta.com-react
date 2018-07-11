@@ -125,7 +125,8 @@ a {
 .intro{
 	@include serif-font;
 	line-height: 1.5;
-	background: rgba($black,0.5);
+	// display: inline;
+	background: rgba($black,0.2);
 }
 
 .text-color{

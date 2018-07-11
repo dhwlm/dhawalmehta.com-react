@@ -22,7 +22,7 @@ class Experience extends React.Component {
             <div className="row justify-content-start mt-5 mb-4 scroll-reveal--sequenced">
               <div className="col-sm-7">
                 <div className="border border-secondary p-2 timeline-block right text-right">
-                  <p>{`Somethin's Cookin'`}</p>
+                  <p>27th June, 1991</p>
                 </div>
               </div>
             </div>
@@ -30,23 +30,7 @@ class Experience extends React.Component {
             <div className="row justify-content-end mb-4 scroll-reveal--sequenced">
               <div className="col-sm-7">
                 <div className="border border-secondary p-2 timeline-block left">
-                  <p>Directi - Media.net, <span className="text-secondary">Sr. UI Developer</span></p>
-                </div>
-              </div>
-            </div>
-
-            <div className="row justify-content-start mb-4 scroll-reveal--sequenced">
-              <div className="col-sm-7">
-                <div className="border border-secondary p-2 timeline-block right text-right">
-                  <p>Tecogis,<span className="text-secondary"> Php Web Developer</span></p>
-                </div>
-              </div>
-            </div>
-
-            <div className="row justify-content-end mb-4 scroll-reveal--sequenced">
-              <div className="col-sm-7">
-                <div className="border border-secondary p-2 timeline-block left">
-                  <p>B.E., Mumbai University, <span className="text-secondary">60%</span></p>
+                  <p>SSC, Maharashtra Board, <span className="text-secondary">85.38%</span></p>
                 </div>
               </div>
             </div>
@@ -62,7 +46,23 @@ class Experience extends React.Component {
             <div className="row justify-content-end mb-4 scroll-reveal--sequenced">
               <div className="col-sm-7">
                 <div className="border border-secondary p-2 timeline-block left">
-                  <p>SSC, Maharashtra Board, <span className="text-secondary">85.38%</span></p>
+                  <p>B.E., Mumbai University, <span className="text-secondary">60%</span></p>
+                </div>
+              </div>
+            </div>
+
+            <div className="row justify-content-start mb-4 scroll-reveal--sequenced">
+              <div className="col-sm-7">
+                <div className="border border-secondary p-2 timeline-block right text-right">
+                  <p>Tecogis,<span className="text-secondary"> Php Web Developer</span></p>
+                </div>
+              </div>
+            </div>
+
+            <div className="row justify-content-end mb-4 scroll-reveal--sequenced">
+              <div className="col-sm-7">
+                <div className="border border-secondary p-2 timeline-block left">
+                  <p>Directi - Media.net, <span className="text-secondary">Sr. UI Developer</span></p>
                 </div>
               </div>
             </div>
@@ -70,7 +70,7 @@ class Experience extends React.Component {
             <div className="row justify-content-start mb-4 scroll-reveal--sequenced">
               <div className="col-sm-7">
                 <div className="border border-secondary p-2 timeline-block right text-right none">
-                  <p>27th June, 1991</p>
+                  <p>{`Somethin's Cookin'`}</p>
                 </div>
               </div>
             </div>
