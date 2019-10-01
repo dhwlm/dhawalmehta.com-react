@@ -45,7 +45,7 @@ class Skills extends React.Component {
 
               <div className="col-12 mb-4 scroll-reveal--sequenced">
                 <div className="border border-secondary p-2 skill-block">
-                  <p>Laravel/OpenCart/Wordpress/CodeIgniter &mdash; <span className="text-secondary">8/10</span></p>
+                  <p>Laravel/OpenCart/Wordpress/CodeIgniter/Magento &mdash; <span className="text-secondary">8/10</span></p>
                 </div>
               </div>
 

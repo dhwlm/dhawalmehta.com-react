@@ -5,14 +5,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'imagesloaded';
 // import registerServiceWorker from './registerServiceWorker';
 import App from './App';
-import { HashRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop'
 
 ReactDOM.render(
-  <HashRouter>
+  <BrowserRouter>
     <ScrollToTop>
       <App />
     </ScrollToTop>
-  </HashRouter>
+  </BrowserRouter>
   , document.getElementById('root'));
   // registerServiceWorker();

@@ -70,7 +70,7 @@ class Experience extends React.Component {
             <div className="row justify-content-start mb-4 scroll-reveal--sequenced">
               <div className="col-sm-7">
                 <div className="border border-secondary p-2 timeline-block right text-right none">
-                  <p>{`Somethin's Cookin'`}</p>
+                  <p>Managing Director, <a href="https://agaetis.tech" rel="noopener noreferrer" target="_blank">Agaetis Technologies</a></p>
                 </div>
               </div>
             </div>
