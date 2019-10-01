@@ -52,7 +52,7 @@ class Contact extends React.Component {
     return <div className="container">
       <div className="row justify-content-center">
         <div className="col-sm-8">
-          <form onSubmit={this.onSubmit} data-netlify="true" name="contact">
+          <form netlify name="contact">
             <input type="hidden" value="prayer" />
             <fieldset>
               <legend>Contact me.</legend>
