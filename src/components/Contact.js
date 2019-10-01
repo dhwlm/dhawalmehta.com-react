@@ -1,5 +1,10 @@
 import React from 'react'
-import $ from 'jquery';
+
+const encode = (data) => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
 
 class Contact extends React.Component {
   constructor(){
@@ -20,40 +25,33 @@ class Contact extends React.Component {
     this.setState({ [e.target.name]: e.target.value });
   }
 
-  onSubmit = (e) => {
-    e.preventDefault();
-    // get our form data out of state
-    const name = this.state.name;
-    const email = this.state.email;
-    const message = this.state.message;
-
+  onSubmit = e => {
     let _this = this;
-
-    $.ajax({
-      type: 'POST',
-      url: '../mail/contact_me.php',
-      data: {name, email, message},
-      success: function (response) {
-        console.dir(response);
+    
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state })
+    })
+      .then(() => {
         _this.setState({
           name: "",
           email: "",
           message: "",
           sent: true,
         });
-      },
-      fail: function (err) {
-        console.dir(err);
-      }
-    });
-  }
+      })
+      .catch(error => alert(error));
+
+    e.preventDefault();
+  };
 
   render () {
     return <div className="container">
       <div className="row justify-content-center">
         <div className="col-sm-8">
-          <form netlify name="contact">
-            <input type="hidden" value="prayer" />
+          <form name="contact" method="post">
+            <input type="hidden" name="form-name" value="contact" />
             <fieldset>
               <legend>Contact me.</legend>
 
